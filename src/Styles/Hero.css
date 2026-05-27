@@ -1,0 +1,531 @@
+/* Hero Section Styles - Avatar Static, Circles Moving - Teal/Emerald Theme */
+
+.hero {
+  padding: 4rem 0 3rem;
+  background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Animated Background Particles - Teal/Emerald */
+.hero-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  background: linear-gradient(135deg, #0d9488, #059669);
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: floatParticle 20s infinite ease-in-out;
+}
+
+.particle:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+  width: 120px;
+  height: 120px;
+  bottom: 15%;
+  right: 8%;
+  animation-delay: -3s;
+  opacity: 0.08;
+}
+
+.particle:nth-child(3) {
+  width: 60px;
+  height: 60px;
+  top: 60%;
+  left: 15%;
+  animation-delay: -5s;
+}
+
+.particle:nth-child(4) {
+  width: 100px;
+  height: 100px;
+  bottom: 30%;
+  left: 70%;
+  animation-delay: -2s;
+}
+
+.particle:nth-child(5) {
+  width: 40px;
+  height: 40px;
+  top: 20%;
+  right: 20%;
+  animation-delay: -7s;
+}
+
+.particle:nth-child(6) {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  left: 85%;
+  animation-delay: -4s;
+  opacity: 0.05;
+}
+
+@keyframes floatParticle {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-40px) rotate(180deg);
+  }
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.badge {
+  margin-top: 25px;
+  background: linear-gradient(135deg, #ccfbf1, #a7f3d0);
+  color: #0d9488;
+  padding: 0.4rem 1rem;
+  border-radius: 40px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.2);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 8px rgba(13, 148, 136, 0);
+  }
+}
+
+.badge i {
+  margin-right: 0.5rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  animation: slideInLeft 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.highlight {
+  background: linear-gradient(135deg, #0d9488, #059669);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(135deg, #0d948820, #05966920);
+  border-radius: 10px;
+  z-index: -1;
+  animation: highlightGlow 2s infinite;
+}
+
+@keyframes highlightGlow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: #475569;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  line-height: 1.6;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #334155;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.contact-item:hover {
+  color: #0d9488;
+  transform: translateY(-2px);
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item i {
+  color: #0d9488;
+  font-size: 1rem;
+  transition: transform 0.3s;
+}
+
+.contact-item:hover i {
+  transform: scale(1.1);
+}
+
+/* Hero Image with Static Avatar - Teal/Emerald */
+.hero-image {
+  flex: 0.6;
+  min-width: 280px;
+  text-align: center;
+  position: relative;
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+  width: 230px;
+  height: 230px;
+}
+
+/* Static Avatar - No Movement */
+.avatar-circle {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #ccfbf1, #a7f3d0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 35px -10px rgba(13, 148, 136, 0.3);
+  position: relative;
+  z-index: 2;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.avatar-circle i {
+  font-size: 5.5rem;
+  color: #0d9488;
+}
+
+/* Tech Circles Wrapper - Contains all moving circles */
+.tech-circles-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Individual Tech Circles - These Move Around the Avatar */
+.tech-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 55px;
+  height: 55px;
+  margin: -27.5px 0 0 -27.5px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  pointer-events: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 3;
+  border: 2px solid rgba(13, 148, 136, 0.2);
+  animation: orbitAround 12s infinite linear;
+}
+
+/* Different orbit radii and speeds for each circle */
+.tech-circle:nth-child(1) { 
+  --orbit-radius: 140px;
+  --duration: 14s;
+  animation: orbitAround var(--duration) infinite linear;
+}
+.tech-circle:nth-child(2) { 
+  --orbit-radius: 150px;
+  --duration: 16s;
+  animation: orbitAround var(--duration) infinite linear reverse;
+}
+.tech-circle:nth-child(3) { 
+  --orbit-radius: 130px;
+  --duration: 12s;
+  animation: orbitAround var(--duration) infinite linear;
+}
+.tech-circle:nth-child(4) { 
+  --orbit-radius: 160px;
+  --duration: 18s;
+  animation: orbitAround var(--duration) infinite linear reverse;
+}
+.tech-circle:nth-child(5) { 
+  --orbit-radius: 145px;
+  --duration: 15s;
+  animation: orbitAround var(--duration) infinite linear;
+}
+.tech-circle:nth-child(6) { 
+  --orbit-radius: 135px;
+  --duration: 13s;
+  animation: orbitAround var(--duration) infinite linear reverse;
+}
+.tech-circle:nth-child(7) { 
+  --orbit-radius: 155px;
+  --duration: 17s;
+  animation: orbitAround var(--duration) infinite linear;
+}
+.tech-circle:nth-child(8) { 
+  --orbit-radius: 125px;
+  --duration: 14s;
+  animation: orbitAround var(--duration) infinite linear reverse;
+}
+
+/* Orbit animation - circles rotate around the center */
+@keyframes orbitAround {
+  0% {
+    transform: rotate(0deg) translateX(var(--orbit-radius, 140px)) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(var(--orbit-radius, 140px)) rotate(-360deg);
+  }
+}
+
+.tech-circle-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tech-circle-inner i {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  color: #0d9488;
+}
+
+.tech-circle:hover {
+  transform: scale(1.2);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  animation-play-state: paused;
+}
+
+.tech-circle:hover .tech-circle-inner i {
+  transform: scale(1.1);
+}
+
+/* Tooltip */
+.tech-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e293b;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  margin-bottom: 8px;
+  z-index: 20;
+}
+
+.tech-circle:hover .tech-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Add glow animation to circles - Teal/Emerald */
+@keyframes circleGlow {
+  0%, 100% {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(13, 148, 136, 0.4);
+  }
+}
+
+.tech-circle {
+  animation: orbitAround var(--duration) infinite linear, circleGlow 3s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 0;
+    min-height: auto;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .avatar-container {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .avatar-circle i {
+    font-size: 4rem;
+  }
+  
+  .tech-circle {
+    width: 45px;
+    height: 45px;
+    margin: -22.5px 0 0 -22.5px;
+  }
+  
+  .tech-circle-inner i {
+    font-size: 1.2rem;
+  }
+  
+  .tech-circle:nth-child(1) { --orbit-radius: 110px; }
+  .tech-circle:nth-child(2) { --orbit-radius: 120px; }
+  .tech-circle:nth-child(3) { --orbit-radius: 100px; }
+  .tech-circle:nth-child(4) { --orbit-radius: 130px; }
+  .tech-circle:nth-child(5) { --orbit-radius: 115px; }
+  .tech-circle:nth-child(6) { --orbit-radius: 105px; }
+  .tech-circle:nth-child(7) { --orbit-radius: 125px; }
+  .tech-circle:nth-child(8) { --orbit-radius: 95px; }
+  
+  .contact-item {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar-container {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .avatar-circle i {
+    font-size: 3rem;
+  }
+  
+  .tech-circle {
+    width: 38px;
+    height: 38px;
+    margin: -19px 0 0 -19px;
+  }
+  
+  .tech-circle-inner i {
+    font-size: 1rem;
+  }
+  
+  .tech-circle:nth-child(1) { --orbit-radius: 90px; }
+  .tech-circle:nth-child(2) { --orbit-radius: 100px; }
+  .tech-circle:nth-child(3) { --orbit-radius: 80px; }
+  .tech-circle:nth-child(4) { --orbit-radius: 110px; }
+  .tech-circle:nth-child(5) { --orbit-radius: 95px; }
+  .tech-circle:nth-child(6) { --orbit-radius: 85px; }
+  .tech-circle:nth-child(7) { --orbit-radius: 105px; }
+  .tech-circle:nth-child(8) { --orbit-radius: 75px; }
+  
+  .tech-tooltip {
+    font-size: 0.6rem;
+    white-space: nowrap;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Optional: Add a subtle pulse to the avatar - Teal/Emerald */
+.avatar-circle {
+  animation: subtlePulse 3s infinite;
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    box-shadow: 0 20px 35px -10px rgba(13, 148, 136, 0.3);
+  }
+  50% {
+    box-shadow: 0 25px 45px -10px rgba(13, 148, 136, 0.5);
+  }
+}
