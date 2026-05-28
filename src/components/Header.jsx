@@ -111,7 +111,7 @@ const Header = ({ scrollToSection }) => {
             <div className="mobile-menu-header">
               <div className="mobile-logo">
                 <i className="fas fa-code"></i>
-                <span>Seenu G.</span>
+                <span>SathishKumar.E</span>
               </div>
               <button 
                 className="mobile-close-btn"
@@ -148,20 +148,20 @@ const Header = ({ scrollToSection }) => {
             </div>
             <div className="mobile-menu-footer">
               <div className="mobile-contact-info">
-                <a href="tel:9789359426" className="mobile-contact-link">
+                <a href="tel:8667545743" className="mobile-contact-link">
                   <i className="fas fa-phone"></i>
-                  <span>9789359426</span>
+                  <span>8667545743</span>
                 </a>
-                <a href="mailto:seenusuriyakalag@gmail.com" className="mobile-contact-link">
+                <a href="mailto:sathishe.elumalaiv@gmail.com" className="mobile-contact-link">
                   <i className="fas fa-envelope"></i>
-                  <span>seenusuriyakalag@gmail.com</span>
+                  <span>sathishe.elumalaiv@gmail.com</span>
                 </a>
               </div>
               <div className="mobile-social-links">
-                <a href="https://www.linkedin.com/in/seenu-g-611a19342/" target="_blank" rel="noopener noreferrer">
+                <a href="http://linkedin.com/in/sathishkumar-e-625465367" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/ESATHISH24" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github"></i>
                 </a>
               </div>
